@@ -1,0 +1,76 @@
+﻿@page "/"
+@using global::Client.Services
+@using global::Shared.Models
+@inject ProductService ProductService
+@inject NavigationManager NavigationManager
+@inject IJSRuntime JSRuntime
+
+<PageTitle>Товары</PageTitle>
+
+<h1>Список товаров</h1>
+
+@if (products == null)
+{
+    <p>Загрузка...</p>
+}
+else
+{
+    <button class="btn btn-primary mb-3" @onclick="AddNewProduct">Добавить товар</button>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Название</th>
+                <th>Описание</th>
+                <th>Цена</th>
+                <th>Количество</th>
+                <th>Действия</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var product in products)
+            {
+                <tr>
+                    <td>@product.Id</td>
+                    <td>@product.Name</td>
+                    <td>@product.Description</td>
+                    <td>@product.Price.ToString("C")</td>
+                    <td>@product.StockQuantity</td>
+                    <td>
+                        <button class="btn btn-sm btn-primary" @onclick="() => EditProduct(product.Id)">Изменить</button>
+                        <button class="btn btn-sm btn-danger" @onclick="() => DeleteProduct(product.Id)">Удалить</button>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+
+@code {
+    private List<Product>? products;
+
+    protected override async Task OnInitializedAsync()
+    {
+        products = await ProductService.GetProductsAsync();
+    }
+
+    private void AddNewProduct()
+    {
+        NavigationManager.NavigateTo("/products/add");
+    }
+
+    private void EditProduct(int id)
+    {
+        NavigationManager.NavigateTo($"/api/products/{id}");
+    }
+
+    private async Task DeleteProduct(int id)
+    {
+        if (await JSRuntime.InvokeAsync<bool>("confirm", $"Вы уверены, что хотите удалить товар с ID {id}?"))
+        {
+            await ProductService.DeleteProductAsync(id);
+            products = await ProductService.GetProductsAsync();
+        }
+    }
+}

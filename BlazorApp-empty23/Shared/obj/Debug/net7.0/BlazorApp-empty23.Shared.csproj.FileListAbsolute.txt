@@ -1,0 +1,11 @@
+C:\Users\Пользователь\source\repos\BlazorApp-empty23\BlazorApp-empty23\Shared\bin\Debug\net7.0\BlazorApp-empty23.Shared.deps.json
+C:\Users\Пользователь\source\repos\BlazorApp-empty23\BlazorApp-empty23\Shared\bin\Debug\net7.0\BlazorApp-empty23.Shared.dll
+C:\Users\Пользователь\source\repos\BlazorApp-empty23\BlazorApp-empty23\Shared\bin\Debug\net7.0\BlazorApp-empty23.Shared.pdb
+C:\Users\Пользователь\source\repos\BlazorApp-empty23\BlazorApp-empty23\Shared\obj\Debug\net7.0\BlazorApp-empty23.Shared.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Пользователь\source\repos\BlazorApp-empty23\BlazorApp-empty23\Shared\obj\Debug\net7.0\BlazorApp-empty23.Shared.AssemblyInfoInputs.cache
+C:\Users\Пользователь\source\repos\BlazorApp-empty23\BlazorApp-empty23\Shared\obj\Debug\net7.0\BlazorApp-empty23.Shared.AssemblyInfo.cs
+C:\Users\Пользователь\source\repos\BlazorApp-empty23\BlazorApp-empty23\Shared\obj\Debug\net7.0\BlazorApp-empty23.Shared.csproj.CoreCompileInputs.cache
+C:\Users\Пользователь\source\repos\BlazorApp-empty23\BlazorApp-empty23\Shared\obj\Debug\net7.0\BlazorApp-empty23.Shared.dll
+C:\Users\Пользователь\source\repos\BlazorApp-empty23\BlazorApp-empty23\Shared\obj\Debug\net7.0\refint\BlazorApp-empty23.Shared.dll
+C:\Users\Пользователь\source\repos\BlazorApp-empty23\BlazorApp-empty23\Shared\obj\Debug\net7.0\BlazorApp-empty23.Shared.pdb
+C:\Users\Пользователь\source\repos\BlazorApp-empty23\BlazorApp-empty23\Shared\obj\Debug\net7.0\ref\BlazorApp-empty23.Shared.dll

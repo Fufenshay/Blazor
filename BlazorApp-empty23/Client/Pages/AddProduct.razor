@@ -1,0 +1,108 @@
+﻿@page "/api/products/{id:int}"
+@using global::Client.Services
+@using global::Shared.Models
+@inject ProductService ProductService
+@inject NavigationManager NavigationManager
+
+<PageTitle>Редактировать товар</PageTitle>
+
+<h1>Редактировать товар</h1>
+
+@if (newProduct == null)
+{
+    @if (productNotFound)
+    {
+        <p class="text-danger">Товар не найден.</p>
+    }
+    else
+    {
+        <p>Загрузка...</p>
+    }
+}
+else
+{
+    <EditForm Model="@newProduct" OnValidSubmit="@HandleValidSubmit">
+        <DataAnnotationsValidator />
+        <ValidationSummary />
+
+        <div class="form-group">
+            <label for="name">Название:</label>
+            <InputText id="name" @bind-Value="newProduct.Name" class="form-control" />
+            <ValidationMessage For="@(() => newProduct.Name)" />
+        </div>
+
+        <div class="form-group">
+            <label for="description">Описание:</label>
+            <InputTextArea id="description" @bind-Value="newProduct.Description" class="form-control" />
+            <ValidationMessage For="@(() => newProduct.Description)" />
+        </div>
+
+        <div class="form-group">
+            <label for="price">Цена:</label>
+            <InputNumber id="price" @bind-Value="newProduct.Price" class="form-control" />
+            <ValidationMessage For="@(() => newProduct.Price)" />
+        </div>
+
+        <div class="form-group">
+            <label for="quantity">Количество на складе:</label>
+            <InputNumber id="quantity" @bind-Value="newProduct.StockQuantity" class="form-control" />
+            <ValidationMessage For="@(() => newProduct.StockQuantity)" />
+        </div>
+
+        <div class="form-group">
+            <label for="image">URL изображения:</label>
+            <InputText id="image" @bind-Value="newProduct.ImageUrl" class="form-control" />
+            <ValidationMessage For="@(() => newProduct.ImageUrl)" />
+        </div>
+
+        <button type="submit" class="btn btn-primary mt-3">Сохранить</button>
+        <button type="button" class="btn btn-secondary mt-3 ml-2" @onclick="Cancel">Отмена</button>
+    </EditForm>
+}
+
+@if (!string.IsNullOrEmpty(errorMessage))
+{
+    <div class="alert alert-danger">@errorMessage</div>
+}
+
+@code {
+    [Parameter]
+    public int Id { get; set; }
+
+    private Product? newProduct;
+    private bool productNotFound = false;
+    private string? errorMessage;
+
+    protected override async Task OnInitializedAsync()
+    {
+        newProduct = await ProductService.GetProductByIdAsync(Id);
+        if (newProduct == null)
+        {
+            productNotFound = true;
+            Console.WriteLine($"Product with ID {Id} not found.");
+            // NavigationManager.NavigateTo("/");
+        }
+    }
+
+    private async Task HandleValidSubmit()
+    {
+        if (newProduct != null)
+        {
+            try
+            {
+                await ProductService.UpdateProductAsync(newProduct);
+                NavigationManager.NavigateTo("/");
+            }
+            catch (Exception ex)
+            {
+                Console.Error.WriteLine($"Error updating product: {ex}");
+                errorMessage = "Произошла ошибка при сохранении товара.";
+            }
+        }
+    }
+
+    private void Cancel()
+    {
+        NavigationManager.NavigateTo("/");
+    }
+}
