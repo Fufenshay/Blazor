@@ -826,6 +826,7 @@ C:\Users\Пользователь\source\repos\BlazorApp-empty23\BlazorApp-empty
 C:\Users\Пользователь\source\repos\BlazorApp-empty23\BlazorApp-empty23\Client\obj\Debug\net7.0\compressed\rzco9y26gk-pg941yibib.gz
 C:\Users\Пользователь\source\repos\BlazorApp-empty23\BlazorApp-empty23\Client\obj\Debug\net7.0\compressed\qpos7jz9mb-c9nauu2r31.gz
 C:\Users\Пользователь\source\repos\BlazorApp-empty23\BlazorApp-empty23\Client\obj\Debug\net7.0\staticwebassets.upToDateCheck.txt
-C:\Users\Пользователь\source\repos\BlazorApp-empty23\BlazorApp-empty23\Client\obj\Debug\net7.0\compressed\2rjz7tkpfc-jsirdg8t9m.gz
-C:\Users\Пользователь\source\repos\BlazorApp-empty23\BlazorApp-empty23\Client\obj\Debug\net7.0\compressed\skxf8x3mdk-fksot7s78y.gz
-C:\Users\Пользователь\source\repos\BlazorApp-empty23\BlazorApp-empty23\Client\obj\Debug\net7.0\compressed\3nke80ch4z-riuknku8av.gz
+C:\Users\Пользователь\source\repos\BlazorApp-empty23\BlazorApp-empty23\Client\obj\Debug\net7.0\BlazorApp-empty23.Client.sourcelink.json
+C:\Users\Пользователь\source\repos\BlazorApp-empty23\BlazorApp-empty23\Client\obj\Debug\net7.0\compressed\2rjz7tkpfc-y9ket8d8nk.gz
+C:\Users\Пользователь\source\repos\BlazorApp-empty23\BlazorApp-empty23\Client\obj\Debug\net7.0\compressed\skxf8x3mdk-371dgrql07.gz
+C:\Users\Пользователь\source\repos\BlazorApp-empty23\BlazorApp-empty23\Client\obj\Debug\net7.0\compressed\3nke80ch4z-v9wez7wz0x.gz

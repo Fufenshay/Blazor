@@ -63,3 +63,4 @@ C:\Users\Пользователь\source\repos\BlazorApp-empty23\BlazorApp-empty
 C:\Users\Пользователь\source\repos\BlazorApp-empty23\BlazorApp-empty23\Server\obj\Debug\net7.0\BlazorApp-empty23.Server.genruntimeconfig.cache
 C:\Users\Пользователь\source\repos\BlazorApp-empty23\BlazorApp-empty23\Server\obj\Debug\net7.0\ref\BlazorApp-empty23.Server.dll
 C:\Users\Пользователь\source\repos\BlazorApp-empty23\BlazorApp-empty23\Server\obj\Debug\net7.0\staticwebassets.upToDateCheck.txt
+C:\Users\Пользователь\source\repos\BlazorApp-empty23\BlazorApp-empty23\Server\obj\Debug\net7.0\BlazorApp-empty23.Server.sourcelink.json

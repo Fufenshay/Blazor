@@ -1,4 +1,6 @@
 ﻿@using Microsoft.AspNetCore.Components.Routing
+@using global::Client.Services
+@inject ThemeService ThemeService
 
 <Router AppAssembly="@typeof(Program).Assembly">
     <Found Context="routeData">
@@ -10,3 +12,10 @@
         </LayoutView>
     </NotFound>
 </Router>
+
+@code {
+    protected override async Task OnInitializedAsync()
+    {
+        await ThemeService.InitializeAsync();
+    }
+}

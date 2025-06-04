@@ -13,6 +13,20 @@
 </head>
 
 <body>
+    <script>
+        // Функции для работы с темой
+        window.themeInterop = {
+            setTheme: function (theme) {
+                document.documentElement.setAttribute('data-bs-theme', theme);
+                localStorage.setItem('theme', theme);
+            },
+            getThemePreference: function () {
+                const savedTheme = localStorage.getItem('theme');
+                if (savedTheme) return savedTheme === 'dark';
+                return window.matchMedia('(prefers-color-scheme: dark)').matches;
+            }
+        };
+    </script>
     <div id="app">Loading...</div>
 
     <div id="blazor-error-ui">
@@ -27,6 +41,9 @@
             document.body.className = theme;
         }
     </script>
+
 </body>
 
+
 </html>
+

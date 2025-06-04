@@ -1,5 +1,29 @@
-﻿@inherits LayoutComponentBase
+﻿@using global::Client.Services
+@inherits LayoutComponentBase
+@inject ThemeService ThemeService
 
-<main>
-    @Body
-</main>
+<div class="@(ThemeService.IsDarkMode ? "dark-theme" : "light-theme")">
+    <div class="top-bar">
+        <button @onclick="ToggleTheme" class="theme-toggle">
+            @if (ThemeService.IsDarkMode)
+            {
+                <span>🌞 Светлая</span>
+            }
+            else
+            {
+                <span>🌙 Тёмная</span>
+            }
+        </button>
+    </div>
+
+    <div class="main">
+        @Body
+    </div>
+</div>
+
+@code {
+    private async Task ToggleTheme()
+    {
+        await ThemeService.ToggleThemeAsync();
+    }
+}

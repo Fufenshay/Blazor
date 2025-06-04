@@ -23,3 +23,6 @@ C:\Users\Пользователь\source\repos\BlazorApp-empty23\BlazorApp-empty
 C:\Users\Пользователь\source\repos\BlazorApp-empty23\BlazorApp-empty23\Client\obj\Debug\net7.0\staticwebassets.build.json
 C:\Users\Пользователь\source\repos\BlazorApp-empty23\BlazorApp-empty23\Client\obj\Debug\net7.0\staticwebassets.build.json
 C:\Users\Пользователь\source\repos\BlazorApp-empty23\BlazorApp-empty23\Client\obj\Debug\net7.0\staticwebassets.build.json
+C:\Users\Пользователь\source\repos\BlazorApp-empty23\BlazorApp-empty23\Client\obj\Debug\net7.0\staticwebassets.build.json
+C:\Users\Пользователь\source\repos\BlazorApp-empty23\BlazorApp-empty23\Client\obj\Debug\net7.0\staticwebassets.build.json
+C:\Users\Пользователь\source\repos\BlazorApp-empty23\BlazorApp-empty23\Client\obj\Debug\net7.0\staticwebassets.build.json
